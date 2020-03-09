@@ -9,15 +9,16 @@
     <a href="../index.html"><img src="../imgs/parking.png" width=168 height=60 class="logo"></a>
     
     <nav class='corpo'>
-			<ul style='margin-left: 300px;'>
+			<ul style='margin-left: 32%;'>
                 <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="simulador.html">Simule</a></li>
                 <li><a href="sobre.html">Sobre nós</a></li>
                 <li><a href="contato.html">Fale Conosco</a></li>
        	   </ul>
 		   </nav>
 </head>
     <body style="background-image: url(../imgs/backgroundprod.png);">
-        
+        <div style="float: left; margin-left: 6px;">
         <h1 style="color: white;font-size:50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
            EstacioCar
         </h1>
@@ -30,40 +31,18 @@
             e a de seus clientes.
         </b>
     <br>
-        <img src="../imgs/ilustracoes.png" alt="">
-
-        <img src="../imgs/carro.png" style="margin-left: 390px; margin-top: auto;">
+        <img src="../imgs/ilustracoes.png" alt="" >
+    </div>
+        <img src="../imgs/carro.png" style="margin-left: 350px; margin-top: 45px;">
 
         <h1 style="margin-left: 60%;font-size:50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
            Como funciona?
          </h1>
      
          <h1 style="margin-left: 60%;"><b style="font-size:20px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-             Sistema de controle de estacionamentos: saiba <br>
-             quais vagas do seu estacionamento estão livres <br>
-             ou ocupadas em tempo real. Melhore o controle <br>
-             do seu estabelecimento e agilize a sua rotina <br>
-             e a de seus clientes.
+            O sistema EstacioCar fornece aos seus usuários interfaces amigáveis com gráficos e imagens onde você tem acesso as vagas e a outras 
+            informações complementares do seu estacionamento. 
+            Nele você também pode gerar relatórios de todos os dados produzidos pelo sistema.  
          </b></h1>
-         <br><br>
-         <h1 ><b style="font-size:30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-        Preço da vaga: R$10,00 a hora. Saiba quanto será sua despesa
-        </b></h1>
-        <b style="font-size:30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Digite quantas horas ficará na vaga:<input type="text" id='hora'></b>
-        <button onclick="calcular();">Calcular</button>
-        <div id="calculo" style="font-size:30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Sua despesa será de: R$</div>
     </body>
 </html>
-
-<script>
-
-
-    function calcular(){
-
-        var h = (Number(hora.value));
-        var valor = (h*10);
-        calculo.innerHTML=`Sua despesa será de: R$${valor.toFixed(2)}`;
-    }
-
-
-</script>
