@@ -14,7 +14,7 @@ email_usuario varchar(30) not null,
 -- Criando uma coluna do tipo Enum e atribuindo os valores de tipos de usuários
 tipo_usuario enum('Administrador', 'Cliente'),
 -- Definindo campo como data e horário atuais 
-data_cadastro datetime default now() not null not null
+data_cadastro datetime default now() not null 
 );
 
 create table tbEstacionamento(
@@ -29,7 +29,7 @@ estado_estacionamento varchar(13) not null,
 cod_usuario int not null,
 foreign key (cod_usuario) references tbUsuario (cod_usuario),
 -- Definindo campo como data e horário atuais 
-data_cadastro datetime default now() not null not null
+data_cadastro datetime default now() not null 
 );
 
 create table tbTelefone_estacionamento(
@@ -38,7 +38,7 @@ num_telefone varchar(15) not null,
 cod_estacionamento int,
 foreign key (cod_estacionamento) references tbEstacionamento(cod_estacionamento),
 -- Definindo campo como data e horário atuais 
-data_cadastro datetime default now() not null not null
+data_cadastro datetime default now() not null 
 );
 
 create table tbVaga(
@@ -49,13 +49,13 @@ tipo_vaga enum('Idoso', 'Deficiente', 'Comum') not null,
 cod_estacionamento int not null,
 foreign key (cod_estacionamento) references tbEstacionamento (cod_estacionamento),
 -- Definindo campo como data e horário atuais 
-data_cadastro datetime default now() not null not null
+data_cadastro datetime default now() not null 
 );
 
 create table tbStatusVaga(
 cod_status_vaga int not null auto_increment primary key,
 tipo_status int not null,
-data_hora_status timestamp default current_timestamp() not null,
+data_hora_status datetime default now() not null,
 cod_vaga int not null,
 foreign key (cod_vaga) references tbVaga (cod_vaga)
 );
@@ -112,7 +112,6 @@ select * from tbVaga;
 select * from tbStatusVaga;
 select * from tbTelefone_estacionamento;
 --  *Select de todas as tabelas
-
 
 -- Em caso de errros - Utilidades:
 
